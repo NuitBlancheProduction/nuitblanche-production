@@ -1,19 +1,296 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nuit Blanche Production – Site en maintenance</title>
-  <meta name="description" content="Site officiel de Nuit Blanche Production. En cours de préparation.">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance - Nuit Blanche Production</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            flex: 1;
+            align-items: start;
+        }
+
+        .maintenance-info {
+            background: #111111;
+            border: 1px solid #333333;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .maintenance-icon {
+            font-size: 4rem;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+
+        .maintenance-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .maintenance-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #cccccc;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .features li {
+            padding: 8px 0;
+            color: #cccccc;
+        }
+
+        .features li:before {
+            content: "•";
+            margin-right: 10px;
+            color: #ffffff;
+        }
+
+        .contact-info {
+            background: #222222;
+            border-left: 4px solid #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .contact-info h3 {
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .cal-section {
+            background: #111111;
+            border: 1px solid #333333;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .cal-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .cal-description {
+            text-align: center;
+            color: #cccccc;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .cal-container {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        #my-cal-inline-rdv {
+            width: 100%;
+            height: 600px;
+            overflow: auto;
+            border-radius: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            border-top: 1px solid #333333;
+            margin-top: 40px;
+            color: #cccccc;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #cccccc;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .maintenance-title {
+                font-size: 2rem;
+            }
+            
+            .maintenance-info, .cal-section {
+                padding: 30px 20px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+
+            #my-cal-inline-rdv {
+                height: 500px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .maintenance-title {
+                font-size: 1.5rem;
+            }
+            
+            .cal-title {
+                font-size: 1.5rem;
+            }
+
+            #my-cal-inline-rdv {
+                height: 400px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Nuit Blanche Production</h1>
-    <p>Le site est en maintenance.</p>
-    <p>Nous préparons quelque chose de beau.</p>
-    <p class="contact">Contact : <a href="mailto:contact@nuitblancheprod.fr">contact@nuitblancheproduction.com</a></p>
-  </div>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">NUIT BLANCHE PRODUCTION</h1>
+        </header>
+
+        <main class="main-content">
+            <section class="maintenance-info">
+                <div class="maintenance-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                
+                <h2 class="maintenance-title">Site en Maintenance</h2>
+                
+                <div class="maintenance-description">
+                    <p>Nous sommes actuellement en train d'améliorer notre site web pour vous offrir une expérience encore plus exceptionnelle. Notre équipe travaille d'arrache-pied pour vous proposer de nouvelles fonctionnalités innovantes.</p>
+                </div>
+
+                <ul class="features">
+                    <li>Interface redesignée et moderne</li>
+                    <li>Nouvelles fonctionnalités interactives</li>
+                    <li>Performance optimisée</li>
+                    <li>Expérience utilisateur améliorée</li>
+                </ul>
+
+                <div class="contact-info">
+                    <h3>
+                        <i class="fas fa-envelope"></i> Nous Contacter
+                    </h3>
+                    <p>En attendant la mise en ligne, notre équipe reste disponible pour tous vos projets créatifs.</p>
+                    <p style="margin-top: 15px;">
+                        <strong>Contact :</strong> contact@nuitblancheproduction.com<br>
+                        <strong>Téléphone :</strong> 06 51 30 13 83
+                    </p>
+                </div>
+            </section>
+
+            <section class="cal-section">
+                <h2 class="cal-title">
+                    <i class="fas fa-calendar-alt"></i> Prendre Rendez-vous
+                </h2>
+                <p class="cal-description">
+                    Planifiez dès maintenant votre consultation gratuite avec notre équipe créative
+                </p>
+                
+                <div class="cal-container">
+                    <!-- Cal inline embed code begins -->
+                    <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-rdv"></div>
+                    <script type="text/javascript">
+                      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                    Cal("init", "rdv", {origin:"https://app.cal.com"});
+                      Cal.ns.rdv("inline", {
+                        elementOrSelector:"#my-cal-inline-rdv",
+                        config: {"layout":"month_view"},
+                        calLink: "nuitblancheproduction/rdv",
+                      });
+                      Cal.ns.rdv("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+                    </script>
+                    <!-- Cal inline embed code ends -->
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Nuit Blanche Production. Tous droits réservés. | 
+               <a href="/conditions-generales" style="color: #ffffff; text-decoration: underline;">Conditions générales</a>
+            </p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/50366441" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Animation de scroll smooth pour la page
+        document.documentElement.style.scrollBehavior = 'smooth';
+    </script>
 </body>
 </html>
